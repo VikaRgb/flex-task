@@ -1,0 +1,108 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+          .code-container {
+            position: relative;
+          }
+
+          .copy-button {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+          }
+          pre {
+            background-color: antiquewhite;
+          }
+        </style>
+      </head>
+      <body>
+    <h1>Копіюємо код звідси і вставляємо в свій VScode</h1>
+   
+   
+        <div class="code-container">
+          <pre id="code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+      .first {
+        width: 700px;
+        height: 300px;
+        outline: 2px solid black;
+      }
+
+      .second {
+        width: 700px;
+        height: 300px;
+        outline: 2px solid black;
+      }
+
+      .third {
+        width: 700px;
+        height: 300px;
+        outline: 2px solid black;
+      }
+
+      .child {
+        width: 50px;
+        height: 50px;
+        outline: 2px solid black;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="first"&gt;
+      &lt;div class="child"&gt;&lt;/div&gt;
+      &lt;div class="child"&gt;&lt;/div&gt;
+      &lt;div class="child"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="second"&gt;
+      &lt;div class="child"&gt;&lt;/div&gt;
+      &lt;div class="child"&gt;&lt;/div&gt;
+      &lt;div class="child"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="third"&gt;
+      &lt;div class="child"&gt;&lt;/div&gt;
+      &lt;div class="child"&gt;&lt;/div&gt;
+      &lt;div class="child"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+      </pre
+          >
+          <button class="copy-button" onclick="copyCode()">Copy</button>
+        </div>
+     <p>Дописати стилі аби отримати наступні фігури</p>
+    <p>Створити новий gitHub репозиторій на який закинути код</p>
+    <p>Створити посилання на сторінку і скинути в скулоджі</p>
+    <img src="./firt.jpg" alt="">
+    <img src="./sec.jpg" alt="">
+
+        <script>
+          function copyCode() {
+            const codeElement = document.getElementById('code');
+            const range = document.createRange();
+            range.selectNode(codeElement);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('Code copied to clipboard!');
+          }
+        </script>
+      </body>
+     
+    </html>
+  </body>
+</html>
+
